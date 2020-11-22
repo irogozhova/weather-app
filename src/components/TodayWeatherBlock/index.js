@@ -9,7 +9,6 @@ import styles from "./TodayWeatherBlock.module.css";
 const TodayWeatherBlock = ({ data }) => {
   const { city, list } = data;
   const today = list.slice(0, 1)[0];
-  console.log(today);
 
   const formatDate = useCallback((date) => {
     return format(new Date(date), "MM/dd/yyyy");

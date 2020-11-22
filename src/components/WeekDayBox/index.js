@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./MainConditionBox.module.css";
+import styles from "./WeekDayBox.module.css";
 
 const WeekDayBox = ({ date, mainConditionIcon, temperature }) => {
   return (
@@ -8,6 +8,7 @@ const WeekDayBox = ({ date, mainConditionIcon, temperature }) => {
       <div className={styles.date}>{date}</div>
       <img
         src={`http://openweathermap.org/img/wn/${mainConditionIcon}.png`}
+        alt="weather condition icon"
         className={styles.icon}
       />
       <div className={styles.temperature}>

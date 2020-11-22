@@ -6,8 +6,6 @@ import WeekDayBox from "components/WeekDayBox";
 import styles from "./WeekForecast.module.css";
 
 const WeekForecast = ({ data }) => {
-  console.log(data);
-
   const formatDate = useCallback((date) => {
     return format(new Date(date), "MM/dd");
   }, []);
