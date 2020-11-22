@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Header from "components/Header";
 import SearchBox from "components/SearchBox";
 import TodayWeatherBlock from "components/TodayWeatherBlock";
+import WeekForecast from "components/WeekForecast";
 
 import {
   weatherSelector,
@@ -34,7 +35,12 @@ const App = () => {
   return (
     <div className={styles.root}>
       <Header onSearch={handleSearch} />
-      <div className={styles.topBlock}>{renderTopBlockContent()}</div>
+      <div className={styles.content}>
+        <div className={styles.topBlock}>{renderTopBlockContent()}</div>
+        {!isLoading && weatherData.length !== 0 && (
+          <WeekForecast data={weatherData.list.slice(1, 8)} />
+        )}
+      </div>
     </div>
   );
 };
