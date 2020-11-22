@@ -14,6 +14,7 @@ const weather = createSlice({
     getDataSuccess(state, { data }) {
       state.isLoading = false;
       state.data = data;
+      state.error = null;
     },
     getDataFailure(state, { errorStatus }) {
       state.isLoading = false;

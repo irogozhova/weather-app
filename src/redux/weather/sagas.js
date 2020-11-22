@@ -6,10 +6,11 @@ function* getDataSaga({ value }) {
     const data = yield call(getWeatherData, value);
     yield put({ type: "weather/getDataSuccess", data });
   } catch (e) {
-    if (e.response) {
-      const errorStatus = e.response.status;
-      yield put({ type: "weather/getDataFailure", errorStatus });
-    }
+    const errorStatus = e.response?.status;
+    yield put({
+      type: "weather/getDataFailure",
+      errorStatus: errorStatus || "no status",
+    });
   }
 }
 

@@ -11,3 +11,8 @@ export const isDataLoadingSelector = createSelector(
   rootSelector,
   (weather) => weather.isLoading
 );
+
+export const errorSelector = createSelector(
+  rootSelector,
+  (weather) => weather.error
+);
