@@ -1,0 +1,10 @@
+.root {
+  position: relative;
+  top: -20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  align-self: flex-end;
+}

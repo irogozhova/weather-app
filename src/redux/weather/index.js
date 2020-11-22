@@ -4,7 +4,7 @@ const weather = createSlice({
   name: "weather",
   initialState: {
     data: [],
-    isLoading: true,
+    isLoading: false,
     error: null,
   },
   reducers: {

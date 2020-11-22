@@ -14,7 +14,7 @@ const SearchBox = ({ onSearch }) => {
       <input
         type="search"
         className={styles.input}
-        placeholder="Type the name of the city"
+        placeholder="Search for a city"
         value={searchEntry}
         onChange={(e) => setSearchEntry(e.target.value)}
       />

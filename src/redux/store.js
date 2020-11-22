@@ -8,7 +8,7 @@ import sagas from "redux/sagas";
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
-  reducer: weather,
+  reducer: { weather },
   middleware: [...getDefaultMiddleware(), sagaMiddleware],
   devTools: process.env.NODE_ENV !== "production",
 });
