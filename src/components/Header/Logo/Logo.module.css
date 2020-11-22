@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  font-family: "Grandstander", cursive;
+}
+
+.icon {
+  position: relative;
+  top: -2px;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 13px;
+}

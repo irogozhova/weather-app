@@ -1,0 +1,9 @@
+.root {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding: 10px 20px;
+  background-color: #63a46c;
+  box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
