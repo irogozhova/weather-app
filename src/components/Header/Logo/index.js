@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as LogoIcon } from "../../../svg/sun.svg";
+import { ReactComponent as LogoIcon } from "icons/sun.svg";
 
 import styles from "./Logo.module.css";
 
