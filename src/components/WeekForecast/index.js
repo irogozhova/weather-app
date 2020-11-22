@@ -14,14 +14,14 @@ const WeekForecast = ({ data }) => {
 
   return (
     <div className={styles.root}>
-      <h2 className={styles.heading}>Week forecast:</h2>
+      <h2 className={styles.heading}>5 day forecast:</h2>
       <div className={styles.daysWrapper}>
         {data.map((day) => (
           <WeekDayBox
             key={day.dt}
             date={formatDate(day.dt_txt)}
             mainConditionIcon={day.weather[0].icon}
-            temperature={day.main.temp}
+            temperature={Math.floor(day.main.temp)}
           />
         ))}
       </div>

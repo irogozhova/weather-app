@@ -8,7 +8,7 @@
   width: 150px;
   height: 220px;
   padding: 0;
-  background-color: rgb(173, 216, 230, 0.7);
+  background-color: rgba(99, 164, 108, 0.7);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -17,7 +17,6 @@
   position: absolute;
   top: 40px;
   font-size: 16px;
-  color: #fff;
 }
 
 .icon {
@@ -28,5 +27,4 @@
   position: absolute;
   bottom: 32px;
   font-size: 30px;
-  color: #fff;
 }
