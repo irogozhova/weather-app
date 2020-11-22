@@ -23,9 +23,9 @@ const App = () => {
   };
 
   const renderTopBlockContent = () => {
-    if (isLoading) return <div className={styles.preloader}>loading...</div>;
+    if (isLoading) return <div className={styles.preloader}>Loading...</div>;
 
-    if (weatherData.length === 0) {
+    if (!weatherData) {
       return <SearchBox onSearch={handleSearch} />;
     }
 
@@ -34,10 +34,10 @@ const App = () => {
 
   return (
     <div className={styles.root}>
-      <Header onSearch={handleSearch} />
+      <Header onSearch={handleSearch} isSearchVisible={weatherData} />
       <div className={styles.content}>
         <div className={styles.topBlock}>{renderTopBlockContent()}</div>
-        {!isLoading && weatherData.length !== 0 && (
+        {weatherData && (
           <WeekForecast
             data={weatherData.list.filter((item) =>
               item.dt_txt.includes("00:00:00")
